@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IkusasaLentsha 2026 Calendar</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f8f5f4;
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #045474;
+  }
+
+  .calendar-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .month {
+    background: #fff;
+    border: 1px solid #fc7115e0;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .month h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #eb7426;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    width: 14.28%;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  th {
+    background: #02647c;
+    color: white;
+  }
+
+  td {
+    background: #f0f0f0;
+    cursor: default;
+  }
+
+  /* Highlight event days in orange */
+  .event {
+    background: #ff9900;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* MODAL STYLING */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .modal {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    animation: popup 0.3s ease;
+  }
+
+  .modal h2 {
+    color: #003366;
+  }
+
+  .modal p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+  }
+
+  @keyframes popup {
+    from {transform: scale(0.7); opacity:0;}
+    to {transform: scale(1); opacity:1;}
+  }
+
+</style>
+</head>
+<body>
+
+<h1>IkusasaLentsha 2026 Calendar</h1>
+
+<div class="calendar-container">
+
+  <!-- JANUARY -->
+  <div class="month">
+    <h3>January</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+      <tr><td>5</td><td class="event" data-event="Resuming of 2026 First Term">12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+      <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+      <tr><td>25</td><td class="event" data-event="2026 Career Guidance Week">26</td><td class="event" data-event="2026 Career Guidance Week">27</td><td class="event" data-event="2026 Career Guidance Week">28</td><td class="event" data-event="2026 Career Guidance Week">29</td><td class="event" data-event="2026 Career Guidance Week">30</td><td>31</td></tr>
+    </table>
+  </div>
+
+  <!-- FEBRUARY -->
+  <div class="month">
+    <h3>February</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+      <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+      <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+      <tr><td>27</td><td>28</td><td>29</td></tr>
+    </table>
+  </div>
+
+  <!-- MARCH -->
+  <div class="month">
+    <h3>March</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+      <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td class="event" data-event="Career Evaluation">16</td><td>17</td><td>18</td><td>19</td></tr>
+      <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+      <tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="event" data-event="End Career Evaluation">31</td></tr>
+    </table>
+  </div>
+
+  <!-- APRIL -->
+  <div class="month">
+    <h3>April</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+      <tr><td class="event" data-event="Start: WhatsApp University Applications">6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+      <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+      <tr><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+    </table>
+  </div>
+
+  <!-- MAY -->
+  <div class="month">
+    <h3>May</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+      <tr><td class="event" data-event="Back to School Program">4</td><td class="event" data-event="Back to School Program">5</td><td class="event" data-event="Back to School Program">6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+      <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+      <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+      <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+    </table>
+  </div>
+
+  <!-- JUNE -->
+  <div class="month">
+    <h3>June</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+      <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+      <tr><td class="event" data-event="Agricultural Career Motivation">20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+      <tr><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+    </table>
+  </div>
+
+  <!-- JULY -->
+  <div class="month">
+    <h3>July</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+      <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+      <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+      <tr><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+    </table>
+  </div>
+
+  <!-- AUGUST -->
+  <div class="month">
+    <h3>August</h3>
+    <table>
+      <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+      <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+      <tr><td>6</td><td class="event" data-event="Sanitary Pads Campaign">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+      <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+      <tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="event" data-event="End WhatsApp University Applications">31</td></tr>
+    </table>
+  </div>
+
+  <!-- OCTOBER -->
+<div class="month">
+<h3>October</h3>
+<table>
+<tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+<tr><td></td><td></td><td></td><td class="event" data-event="Start NSFAS Applications">1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+<tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+<tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+<tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+</table>
+</div>
+
+<!-- NOVEMBER -->
+<div class="month">
+<h3>November</h3>
+<table>
+<tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+<tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+<tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+<tr><td>27</td><td>28</td><td>29</td><td class="event" data-event="End Bursary/Study Programme">30</td></tr>
+</table>
+</div>
+
+<!-- DECEMBER -->
+<div class="month">
+<h3>December</h3>
+<table>
+<tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+<tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<tr><td>6</td><td>7</td><td>8</td><td>9</td><td >10</td><td>11</td><td>12</td></tr>
+<tr><td>13</td><td>14</td><td class="event" data-event="End Year Function">15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+<tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+</table>
+</div>
+
+</div>
+
+</div>
+
+<!-- POP-UP MODAL -->
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal">
+    <span id="closeModal" class="close-btn">&times;</span>
+    <h2 id="modalTitle">Event Title</h2>
+    <p id="modalDescription">Event details here</p>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const events = document.querySelectorAll(".event");
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeModal = document.getElementById("closeModal");
+
+  events.forEach(event => {
+    event.addEventListener("click", function(){
+      modalTitle.innerText = this.dataset.event;
+      modalDescription.innerText = "IkusasaLentsha official event.";
+      modalOverlay.style.display = "flex";
+    });
+  });
+
+  closeModal.addEventListener("click", function(){
+    modalOverlay.style.display = "none";
+  });
+
+  modalOverlay.addEventListener("click", function(e){
+    if(e.target === modalOverlay){
+      modalOverlay.style.display = "none";
+    }
+  });
+});
+</script>
+
+</body>
+</html>

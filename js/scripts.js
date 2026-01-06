@@ -35,3 +35,31 @@ setInterval(showNextQuote, 4000);
 showNextQuote(); // Show first quote
 
 
+//calender
+document.addEventListener("DOMContentLoaded", function () {
+
+  const events = document.querySelectorAll(".event");
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeModal = document.getElementById("closeModal");
+
+  events.forEach(day => {
+    day.addEventListener("click", () => {
+      modalTitle.textContent = day.dataset.event;
+      modalDescription.textContent = "IkusasaLentsha official event for learners.";
+      modalOverlay.style.display = "flex";
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modalOverlay.style.display = "none";
+  });
+
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.style.display = "none";
+    }
+  });
+
+});
